@@ -2,7 +2,6 @@
 
 namespace App\Admin\Controllers;
 
-use App\Models\User;
 use App\Models\CourseType;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
@@ -25,8 +24,8 @@ class CourseTypeController extends AdminController
         $show = new Show(CourseType::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('name', __('Category'));
-        $show->field('email', __('Description'));
+        $show->field('title', __('Category'));
+        $show->field('description', __('Description'));
         $show->field('order', __('Order'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
