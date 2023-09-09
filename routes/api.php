@@ -18,5 +18,7 @@ Route::group(['namespace'=>'Api'], function() {
     // auth middleware
     Route::group(['middleware'=>['auth:sanctum']], function() {
         Route::any('/courseList', 'CourseController@courseList');
+        Route::any('/courseDetail', 'CourseController@courseDetail');
+        Route::any('/checkout', 'PayController@checkout');
     });
 });
